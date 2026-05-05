@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Anas Sikder — Industrial & Production Engineer</title>
+<meta name="description" content="Portfolio of Md Anas Sikder – Industrial & Production Engineer specializing in manufacturing optimization, CAD, and operations research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --bg:#060c10;
+  --bg2:#0b141c;
+  --bg3:#101e28;
+  --border:#1a2e3e;
+  --accent:#00d4ff;
+  --accent2:#ff6b35;
+  --accent3:#7dff8a;
+  --text:#e8f4f8;
+  --muted:#6a8fa5;
+  --card:#0f1e28;
+  --glow:0 0 40px rgba(0,212,255,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+
+.cursor{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transition:transform .1s;mix-blend-mode:screen}
+.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(0,212,255,0.4);border-radius:50%;pointer-events:none;z-index:9998;transition:all .15s ease;mix-blend-mode:screen}
+
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4;pointer-events:none;z-index:1}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:all .3s}
+nav.scrolled{background:rgba(6,12,16,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 0}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--accent);letter-spacing:.08em;text-decoration:none}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;transition:.2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:.3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--accent);color:var(--bg)!important;padding:8px 20px;border-radius:4px;font-weight:700!important;font-size:.8rem!important}
+.nav-cta::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--text);transition:.3s}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 80px}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.08),transparent 70%);top:-100px;right:-100px;animation:floatGlow 8s ease-in-out infinite}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.06),transparent 70%);bottom:0;left:20%;animation:floatGlow 10s ease-in-out infinite reverse}
+@keyframes floatGlow{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+
+.hero-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 340px;gap:80px;align-items:center;position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);padding:6px 16px;border-radius:40px;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);margin-bottom:24px;animation:fadeUp .8s ease both}
+.hero-tag .dot{width:6px;height:6px;background:var(--accent3);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.95;letter-spacing:.02em;color:var(--text);animation:fadeUp .8s .1s ease both}
+.hero-name .accent-word{color:var(--accent);text-shadow:0 0 60px rgba(0,212,255,.3)}
+.hero-role{font-size:1.1rem;color:var(--muted);font-weight:300;margin:20px 0 32px;animation:fadeUp .8s .2s ease both;letter-spacing:.02em}
+.hero-role .kw{color:var(--accent2);font-weight:500}
+.hero-stats{display:flex;gap:40px;margin-bottom:40px;animation:fadeUp .8s .3s ease both}
+.hero-stat{text-align:left}
+.hero-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--accent);letter-spacing:.05em}
+.hero-stat-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .8s .4s ease both}
+.btn{padding:14px 32px;border-radius:4px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .2s;font-size:.9rem;letter-spacing:.03em;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:var(--bg);box-shadow:0 0 30px rgba(0,212,255,.2)}
+.btn-primary:hover{background:#00b8d9;transform:translateY(-2px);box-shadow:0 0 50px rgba(0,212,255,.35)}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.05)}
+.hero-img-wrap{position:relative;animation:fadeUp .8s .2s ease both}
+.hero-img-frame{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.hero-img-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,255,.12),transparent 60%);z-index:1;pointer-events:none}
+.hero-img-frame img{width:100%;display:block;filter:grayscale(20%)}
+.hero-img-deco{position:absolute;top:-16px;right:-16px;width:60px;height:60px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 8px 0 0}
+.hero-img-deco2{position:absolute;bottom:-16px;left:-16px;width:60px;height:60px;border-bottom:2px solid var(--accent2);border-left:2px solid var(--accent2);border-radius:0 0 0 8px}
+.hero-contact-strip{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.hero-contact-item{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted)}
+.hero-contact-item i{color:var(--accent);width:16px}
+.hero-contact-item a{color:var(--muted);text-decoration:none;transition:.2s}
+.hero-contact-item a:hover{color:var(--accent)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+section{padding:100px 0;position:relative;z-index:2}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.section-label::before{content:'//';color:var(--accent2)}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:.04em;color:var(--text);line-height:1;margin-bottom:60px}
+.section-title span{color:var(--accent)}
+
+.kw{color:var(--accent);font-weight:600}
+.kw-orange{color:var(--accent2);font-weight:600}
+.kw-green{color:var(--accent3);font-weight:600}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-text{font-size:1.05rem;color:var(--muted);line-height:1.8}
+.about-text p+p{margin-top:16px}
+.about-highlight{background:rgba(0,212,255,.06);border-left:3px solid var(--accent);padding:20px 24px;border-radius:0 12px 12px 0;margin-top:24px;font-style:italic;color:var(--text);font-size:1rem}
+.lang-pills{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.lang-pill{background:rgba(255,255,255,.04);border:1px solid var(--border);padding:8px 18px;border-radius:40px;font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.lang-pill i{color:var(--accent3)}
+.about-metrics{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:.3s;position:relative;overflow:hidden}
+.metric-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.metric-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px);box-shadow:var(--glow)}
+.metric-num{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--accent);letter-spacing:.04em}
+.metric-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.metric-card.orange::before{background:linear-gradient(90deg,var(--accent2),transparent)}
+.metric-card.orange .metric-num{color:var(--accent2)}
+.metric-card.green::before{background:linear-gradient(90deg,var(--accent3),transparent)}
+.metric-card.green .metric-num{color:var(--accent3)}
+
+/* EDUCATION */
+.edu-bg{background:var(--bg2)}
+.timeline{position:relative;padding-left:30px}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent),rgba(0,212,255,.1))}
+.timeline-item{position:relative;margin-bottom:50px;animation:fadeUp .6s ease both}
+.timeline-dot{position:absolute;left:-35px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg2);box-shadow:0 0 12px rgba(0,212,255,.5)}
+.timeline-dot.orange{background:var(--accent2);box-shadow:0 0 12px rgba(255,107,53,.5)}
+.timeline-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;transition:.3s}
+.timeline-card:hover{border-color:rgba(0,212,255,.25);box-shadow:var(--glow)}
+.timeline-date{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.1em;margin-bottom:8px}
+.timeline-title{font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.timeline-sub{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.timeline-pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);padding:4px 12px;border-radius:40px;font-size:.75rem;color:var(--accent);font-family:'JetBrains Mono',monospace}
+.pill.orange{background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)}
+.pill.green{background:rgba(125,255,138,.08);border-color:rgba(125,255,138,.15);color:var(--accent3)}
+
+/* EXPERIENCE - RESTRUCTURED */
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:.3s;position:relative;overflow:hidden;margin-bottom:30px}
+.exp-card::after{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(0,212,255,.06),transparent 70%);pointer-events:none}
+.exp-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px);box-shadow:var(--glow)}
+.exp-card.orange::after{background:radial-gradient(circle,rgba(255,107,53,.06),transparent 70%)}
+.exp-card.orange:hover{border-color:rgba(255,107,53,.3);box-shadow:0 0 40px rgba(255,107,53,.12)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;flex-wrap:wrap;gap:10px}
+.exp-role{font-size:1.35rem;font-weight:700;color:var(--text)}
+.exp-badge{background:rgba(0,212,255,.1);color:var(--accent);padding:4px 12px;border-radius:40px;font-size:.72rem;font-weight:700;letter-spacing:.06em;white-space:nowrap}
+.exp-badge.orange{background:rgba(255,107,53,.1);color:var(--accent2)}
+.exp-company{font-size:1rem;color:var(--accent);font-weight:600;margin-bottom:2px}
+.exp-company.orange{color:var(--accent2)}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.exp-responsibilities{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:0}
+.exp-resp-item{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:.2s}
+.exp-resp-item:hover{border-color:rgba(0,212,255,.2);background:rgba(0,212,255,.03)}
+.exp-card.orange .exp-resp-item:hover{border-color:rgba(255,107,53,.2);background:rgba(255,107,53,.03)}
+.exp-resp-icon{width:32px;height:32px;border-radius:8px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--accent);flex-shrink:0}
+.exp-card.orange .exp-resp-icon{background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)}
+.exp-resp-text{font-size:.87rem;color:var(--muted);line-height:1.5}
+.exp-resp-text strong{color:var(--text);font-weight:600;display:block;margin-bottom:2px;font-size:.85rem}
+
+/* SKILLS */
+.skills-bg{background:var(--bg2)}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+.skill-group{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px}
+.skill-group-title{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.skill-group-title i{color:var(--accent2)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:10px}
+.skill-tag{background:rgba(255,255,255,.04);border:1px solid var(--border);padding:8px 16px;border-radius:8px;font-size:.82rem;color:var(--text);transition:.2s;cursor:default;font-weight:500}
+.skill-tag:hover{background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.3);color:var(--accent);transform:scale(1.04)}
+.skill-tag.hot{background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.25);color:var(--accent)}
+.skill-tag.hot2{background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.25);color:var(--accent2)}
+
+/* THESIS / PROJECTS - RESTRUCTURED */
+.thesis-hero{background:linear-gradient(135deg,rgba(0,212,255,.06) 0%,rgba(255,107,53,.04) 100%);border:1px solid var(--border);border-radius:24px;padding:48px;margin-bottom:40px;position:relative;overflow:hidden}
+.thesis-hero::before{content:'THESIS';position:absolute;right:-10px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:'Bebas Neue',sans-serif;font-size:6rem;color:rgba(0,212,255,.04);letter-spacing:.1em;pointer-events:none;white-space:nowrap}
+.thesis-title{font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.3}
+.thesis-supervisor{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.thesis-findings{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.thesis-finding-card{background:rgba(0,0,0,.2);border:1px solid rgba(0,212,255,.12);border-radius:14px;padding:20px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+.thesis-finding-card:hover{border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.04)}
+.thesis-finding-icon{width:36px;height:36px;border-radius:10px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;color:var(--accent)}
+.thesis-finding-icon.orange{background:rgba(255,107,53,.1);border-color:rgba(255,107,53,.2);color:var(--accent2)}
+.thesis-finding-icon.green{background:rgba(125,255,138,.1);border-color:rgba(125,255,138,.2);color:var(--accent3)}
+.thesis-finding-text strong{display:block;font-size:.85rem;color:var(--text);margin-bottom:4px;font-weight:600}
+.thesis-finding-text span{font-size:.82rem;color:var(--muted);line-height:1.5}
+
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;transition:.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.proj-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-6px);box-shadow:var(--glow)}
+.proj-card-top{padding:24px 24px 16px;border-bottom:1px solid var(--border)}
+.proj-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.proj-icon-wrap{width:44px;height:44px;border-radius:12px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.proj-tag{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);color:var(--accent);padding:3px 10px;border-radius:40px;font-size:.7rem;font-family:'JetBrains Mono',monospace;letter-spacing:.05em}
+.proj-title{font-weight:700;color:var(--text);font-size:.95rem;margin-bottom:6px}
+.proj-desc{font-size:.83rem;color:var(--muted);line-height:1.6}
+.proj-card-bottom{padding:14px 24px;background:rgba(0,0,0,.15);margin-top:auto}
+.proj-result{font-size:.8rem;color:var(--accent3);font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:6px}
+.proj-result::before{content:'▲';font-size:.65rem}
+
+/* PUBLICATIONS */
+.pub-bg{background:var(--bg2)}
+.pub-grid{display:flex;flex-direction:column;gap:20px}
+.pub-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;display:flex;gap:24px;align-items:flex-start;transition:.3s}
+.pub-card:hover{border-color:rgba(0,212,255,.25);transform:translateX(8px)}
+.pub-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:rgba(0,212,255,.15);line-height:1;flex-shrink:0;width:40px}
+.pub-title{font-weight:700;color:var(--text);margin-bottom:6px;font-size:1rem;line-height:1.4}
+.pub-journal{font-size:.82rem;color:var(--accent);font-family:'JetBrains Mono',monospace}
+.pub-status{display:inline-block;background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.2);color:var(--accent2);padding:3px 10px;border-radius:40px;font-size:.72rem;font-weight:700;margin-top:8px}
+.pub-link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.82rem;text-decoration:none;margin-top:8px;transition:.2s}
+.pub-link:hover{color:#00b8d9}
+
+/* ACHIEVEMENTS */
+.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ach-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:.3s}
+.ach-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px)}
+.ach-icon{font-size:2.2rem;margin-bottom:16px}
+.ach-title{font-weight:700;color:var(--text);font-size:.95rem;margin-bottom:8px}
+.ach-desc{font-size:.83rem;color:var(--muted);line-height:1.5}
+
+/* TRAINING */
+.training-bg{background:var(--bg2)}
+.training-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.training-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:.3s}
+.training-card:hover{border-color:rgba(0,212,255,.25);box-shadow:var(--glow)}
+.training-date{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.1em;margin-bottom:10px}
+.training-title{font-weight:700;color:var(--text);margin-bottom:8px}
+.training-desc{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+/* CERTIFICATIONS - WITH IMAGE ROW */
+.cert-section-label{margin-top:48px;margin-bottom:20px}
+.cert-image-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.cert-image-item{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:.3s;cursor:pointer;flex:0 0 auto;width:200px}
+.cert-image-item:hover{border-color:var(--accent);box-shadow:var(--glow);transform:translateY(-4px)}
+.cert-image-item img{width:100%;height:140px;object-fit:cover;display:block;filter:grayscale(20%);transition:.3s}
+.cert-image-item:hover img{filter:grayscale(0%)}
+.cert-image-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,12,16,.95));padding:20px 10px 10px;font-size:.7rem;color:var(--accent);font-family:'JetBrains Mono',monospace;text-align:center;letter-spacing:.05em}
+.cert-pills-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.cert-pill{background:rgba(125,255,138,.05);border:1px solid rgba(125,255,138,.15);padding:7px 15px;border-radius:8px;font-size:.78rem;color:var(--accent3);display:flex;align-items:center;gap:8px;transition:.2s}
+.cert-pill i{opacity:.7}
+.cert-pill:hover{background:rgba(125,255,138,.1);border-color:rgba(125,255,138,.3)}
+
+/* CERTIFICATE LIGHTBOX */
+.cert-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.cert-lightbox.open{display:flex}
+.cert-lightbox-inner{position:relative;max-width:90vw;max-height:90vh}
+.cert-lightbox-inner img{max-width:100%;max-height:90vh;border-radius:12px;border:1px solid var(--border)}
+.cert-lightbox-close{position:absolute;top:-16px;right:-16px;width:40px;height:40px;background:var(--accent);color:var(--bg);border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.cert-lightbox-close:hover{background:#00b8d9;transform:scale(1.1)}
+
+/* CONTACT */
+.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:start}
+.contact-info-block{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px}
+.contact-info-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--text);margin-bottom:8px;letter-spacing:.04em}
+.contact-info-sub{font-size:.9rem;color:var(--muted);margin-bottom:32px}
+.contact-detail{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.contact-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);color:var(--accent)}
+.contact-detail-text{font-size:.9rem;color:var(--text)}
+.contact-detail-text small{display:block;font-size:.75rem;color:var(--muted)}
+.social-row{display:flex;gap:12px;margin-top:32px}
+.soc-btn{width:48px;height:48px;border-radius:12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.1rem;text-decoration:none;transition:.2s}
+.soc-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.08)}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field label{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.form-field input,.form-field textarea,.form-field select{background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text);padding:14px 18px;border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;transition:.2s;outline:none;width:100%}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--accent);background:rgba(0,212,255,.03)}
+.form-field textarea{min-height:130px;resize:vertical}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 0;text-align:center}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);letter-spacing:.06em;margin-bottom:8px}
+.footer-text{font-size:.82rem;color:var(--muted)}
+.footer-links{display:flex;justify-content:center;gap:30px;margin:20px 0;list-style:none}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.82rem;transition:.2s}
+.footer-links a:hover{color:var(--accent)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+.scroll-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:var(--accent);color:var(--bg);border:none;border-radius:12px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;z-index:50;opacity:0;transform:translateY(20px);transition:.3s;box-shadow:0 0 20px rgba(0,212,255,.3)}
+.scroll-top.show{opacity:1;transform:translateY(0)}
+.scroll-top:hover{background:#00b8d9}
+
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(6,12,16,.97);padding:24px 40px;flex-direction:column;gap:16px;border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-img-wrap{order:-1;max-width:280px;margin:0 auto}
+  .about-grid{grid-template-columns:1fr}
+  .exp-responsibilities{grid-template-columns:1fr}
+  .skills-layout{grid-template-columns:1fr 1fr}
+  .projects-grid{grid-template-columns:1fr 1fr}
+  .ach-grid{grid-template-columns:1fr 1fr}
+  .training-grid{grid-template-columns:1fr}
+  .contact-layout{grid-template-columns:1fr}
+  .thesis-findings{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .cert-image-item{width:160px}
+}
+@media(max-width:600px){
+  .container{padding:0 20px}
+  .nav-inner{padding:0 20px}
+  .skills-layout{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .ach-grid{grid-template-columns:1fr}
+  .hero-stats{gap:24px}
+  .about-metrics{grid-template-columns:1fr 1fr}
+  .cert-image-item{width:140px}
+}
+
+.progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:200;transition:width .1s}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">MAS<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+  </div>
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <div class="hero-tag"><span class="dot"></span>Available for new opportunities</div>
+      <h1 class="hero-name">MD<br><span class="accent-word">ANAS</span><br>SIKDER</h1>
+      <div class="hero-role">
+        <span class="kw">Industrial & Production Engineer</span> ·
+        <span class="kw-orange">Manufacturing Executive</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">3.30</div>
+          <div class="hero-stat-label">CGPA / 4.00</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2+</div>
+          <div class="hero-stat-label">Publications</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">225</div>
+          <div class="hero-stat-label">SUST Rank 2023</div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+        <a href="#projects" class="btn btn-ghost"><i class="fas fa-flask"></i> View Projects</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img-deco"></div>
+      <div class="hero-img-deco2"></div>
+      <div class="hero-img-frame">
+        <img src="Profile picture.jpg" alt="Md Anas Sikder" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0f2030,#1a3a50)';this.parentElement.style.minHeight='380px'">
+      </div>
+      <div class="hero-contact-strip" style="margin-top:20px">
+        <div class="hero-contact-item"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</div>
+        <div class="hero-contact-item"><i class="fas fa-envelope"></i><a href="mailto:anas.sust.edu@gmail.com">anas.sust.edu@gmail.com</a></div>
+        <div class="hero-contact-item"><i class="fas fa-phone"></i> +880 1707855910</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">// 01</div>
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div>
+        <div class="about-text">
+          <p>I'm a <span class="kw">B.Sc. Industrial & Production Engineer</span> from <span class="kw">Shahjalal University of Science and Technology (SUST)</span>, passionate about applying <span class="kw-orange">Artificial Intelligence</span> and <span class="kw-orange">Optimization Techniques</span> to revolutionize manufacturing.</p>
+          <p>My thesis applied <span class="kw">Ant Colony Optimization (ACO)</span> and <span class="kw">Gray Relational Analysis (GRA)</span> on real <span class="kw">CNC machining</span> experiments — discovering that <span class="kw-green">tool path sequence</span> matters more than spindle speed or feed rate.</p>
+          <p>Currently serving as <span class="kw-orange">Executive – Resource Operations Management</span> at <strong>X Ceramics Group</strong>, where I drive <span class="kw">production planning</span>, reduce machine downtime, and optimize utility consumption.</p>
+          <div class="about-highlight">
+            "To leverage <span class="kw">artificial intelligence</span> and <span class="kw-orange">optimization techniques</span> to enhance manufacturing systems by improving efficiency, sustainability, and adaptability in smart industrial settings."
+          </div>
+          <div class="lang-pills" style="margin-top:24px">
+            <div class="lang-pill"><i class="fas fa-circle-check"></i> English — B2 Independent</div>
+            <div class="lang-pill"><i class="fas fa-star"></i> Bengali — Native</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-metrics reveal">
+        <div class="metric-card reveal reveal-delay-1">
+          <div class="metric-num">3.30</div>
+          <div class="metric-label">CGPA at SUST (4.0 scale)</div>
+        </div>
+        <div class="metric-card orange reveal reveal-delay-2">
+          <div class="metric-num">72%</div>
+          <div class="metric-label">Mold Changeover Time Saved</div>
+        </div>
+        <div class="metric-card green reveal reveal-delay-3">
+          <div class="metric-num">36</div>
+          <div class="metric-label">Taguchi CNC Experimental Runs</div>
+        </div>
+        <div class="metric-card reveal reveal-delay-1">
+          <div class="metric-num">225</div>
+          <div class="metric-label">Ranked at SUST – AD Scientific Index 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="edu-bg">
+  <div class="container">
+    <div class="section-label">// 02</div>
+    <h2 class="section-title">Edu<span>cation</span></h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Aug 2018 – Mar 2024</div>
+          <div class="timeline-title">B.Sc. Industrial & Production Engineering</div>
+          <div class="timeline-sub">Shahjalal University of Science and Technology (SUST), Sylhet · CGPA <span class="kw">3.30 / 4.00</span></div>
+          <div class="timeline-pills">
+            <span class="pill">CNC Machining</span>
+            <span class="pill">Operations Research</span>
+            <span class="pill orange">MATLAB</span>
+            <span class="pill orange">SolidWorks</span>
+            <span class="pill green">Thesis Research</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot orange"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">2016 – 2018</div>
+          <div class="timeline-title">Higher Secondary Certificate (Science)</div>
+          <div class="timeline-sub">Cantonment College, Cumilla · GPA <span class="kw-orange">4.58 / 5.00</span></div>
+          <div class="timeline-pills">
+            <span class="pill green">1st Rank – Physics Exam</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot orange"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">2014 – 2016</div>
+          <div class="timeline-title">Secondary School Certificate (Science)</div>
+          <div class="timeline-sub">Banskait P.J. High School, Muradnagar, Cumilla · GPA <span class="kw-orange">4.78 / 5.00</span></div>
+          <div class="timeline-pills">
+            <span class="pill">Class Monitor Gr. 8–10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE — RESTRUCTURED -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">// 03</div>
+    <h2 class="section-title">Work <span>Experience</span></h2>
+
+    <!-- Job 1 -->
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div class="exp-role">Executive — Resource Operations Management</div>
+        <span class="exp-badge">Current</span>
+      </div>
+      <div class="exp-company">X Ceramics Group · Gazipur, Dhaka</div>
+      <div class="exp-period">Dec 2025 – Present</div>
+      <div class="exp-responsibilities">
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon"><i class="fas fa-server"></i></div>
+          <div class="exp-resp-text">
+            <strong>Equipment Tracking</strong>
+            Implemented a tracking system that significantly reduced machine downtime across production lines.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon"><i class="fas fa-bolt"></i></div>
+          <div class="exp-resp-text">
+            <strong>Utility Optimization</strong>
+            Developed strategies to lower power & utility consumption, delivering measurable cost savings.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon"><i class="fas fa-wrench"></i></div>
+          <div class="exp-resp-text">
+            <strong>Maintenance Scheduling</strong>
+            Coordinated routine maintenance schedules to ensure consistent equipment reliability.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon"><i class="fas fa-chart-bar"></i></div>
+          <div class="exp-resp-text">
+            <strong>Production Planning</strong>
+            Optimized production planning & demand forecasting based on tile and model requirements.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon"><i class="fas fa-boxes"></i></div>
+          <div class="exp-resp-text">
+            <strong>Spare Parts & Documentation</strong>
+            Managed spare parts inventory and maintained comprehensive maintenance documentation.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="exp-card orange reveal reveal-delay-1">
+      <div class="exp-header">
+        <div class="exp-role">Junior Executive — Manufacturing</div>
+        <span class="exp-badge orange">1 Year</span>
+      </div>
+      <div class="exp-company orange">Industrial 3D Solution · Malibagh, Dhaka</div>
+      <div class="exp-period">Dec 2024 – Dec 2025</div>
+      <div class="exp-responsibilities">
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)"><i class="fas fa-drafting-compass"></i></div>
+          <div class="exp-resp-text">
+            <strong>CAD Design</strong>
+            Developed precise CAD drawings from written and verbal specifications for manufacturing.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)"><i class="fas fa-calculator"></i></div>
+          <div class="exp-resp-text">
+            <strong>Structural Analysis</strong>
+            Calculated weights, volumes and stress factors for technical design validation.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)"><i class="fas fa-print"></i></div>
+          <div class="exp-resp-text">
+            <strong>Rapid Prototyping</strong>
+            Built physical prototypes using 3D printing technology for design validation and client review.
+          </div>
+        </div>
+        <div class="exp-resp-item">
+          <div class="exp-resp-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)"><i class="fas fa-file-alt"></i></div>
+          <div class="exp-resp-text">
+            <strong>Data-Driven Reporting</strong>
+            Prepared sales reports and data analysis using MS Office tools for business decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-bg">
+  <div class="container">
+    <div class="section-label">// 04</div>
+    <h2 class="section-title">Tech <span>Skills</span></h2>
+    <div class="skills-layout">
+      <div class="skill-group reveal">
+        <div class="skill-group-title"><i class="fas fa-code"></i> Programming & Data</div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">MATLAB</span>
+          <span class="skill-tag hot">Python</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">C</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-title"><i class="fas fa-cube"></i> CAD & Simulation</div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">SolidWorks</span>
+          <span class="skill-tag hot">Fusion 360</span>
+          <span class="skill-tag hot2">AutoCAD</span>
+          <span class="skill-tag">Arena Simulator</span>
+          <span class="skill-tag">G-code</span>
+          <span class="skill-tag">3D Printing</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-title"><i class="fas fa-chart-line"></i> Optimization & Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">Ant Colony Optimization</span>
+          <span class="skill-tag hot">Gray Relational Analysis</span>
+          <span class="skill-tag">Gurobi</span>
+          <span class="skill-tag">Pyomo</span>
+          <span class="skill-tag">Minitab</span>
+          <span class="skill-tag">Design Expert</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title"><i class="fas fa-industry"></i> Manufacturing</div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">CNC Machining</span>
+          <span class="skill-tag">SMED / Lean</span>
+          <span class="skill-tag">Six Sigma YB</span>
+          <span class="skill-tag">FMEA</span>
+          <span class="skill-tag">Production Planning</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-title"><i class="fas fa-database"></i> Data Science & AI</div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">Random Forest</span>
+          <span class="skill-tag hot">XGBoost</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Explainable AI</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-title"><i class="fas fa-tools"></i> Software & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MS Excel</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">MS Office</span>
+          <span class="skill-tag">Taguchi Method</span>
+          <span class="skill-tag">Pareto Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS & THESIS — RESTRUCTURED -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">// 05</div>
+    <h2 class="section-title">Projects & <span>Thesis</span></h2>
+
+    <!-- Thesis Highlight — Structured -->
+    <div class="thesis-hero reveal">
+      <div class="timeline-date" style="margin-bottom:8px">Undergraduate Thesis · Feb 2023 – Mar 2024</div>
+      <div class="thesis-title">Tool Path Selection Based <span class="kw">Multi-Featured Part Machining</span> and Optimization: An Experimental Approach</div>
+      <div class="thesis-supervisor">Supervised by Ms. Shanta Saha, SUST &nbsp;·&nbsp; Tools: <span class="kw">MATLAB</span> · <span class="kw-orange">SolidWorks</span> · <span class="kw-orange">Fusion 360</span> · G-code · Minitab · Design Expert</div>
+      <div class="thesis-findings">
+        <div class="thesis-finding-card">
+          <div class="thesis-finding-icon"><i class="fas fa-route"></i></div>
+          <div class="thesis-finding-text">
+            <strong>ACO Optimization</strong>
+            <span>Applied <span class="kw">Ant Colony Optimization</span> to optimize tool path sequencing for a multi-featured aluminum CNC part.</span>
+          </div>
+        </div>
+        <div class="thesis-finding-card">
+          <div class="thesis-finding-icon orange"><i class="fas fa-layer-group"></i></div>
+          <div class="thesis-finding-text">
+            <strong>Gray Relational Analysis</strong>
+            <span>Used <span class="kw-orange">GRA</span> for simultaneous multi-objective optimization of energy, machining time, and MRR.</span>
+          </div>
+        </div>
+        <div class="thesis-finding-card">
+          <div class="thesis-finding-icon green"><i class="fas fa-flask"></i></div>
+          <div class="thesis-finding-text">
+            <strong>36 Experimental Runs</strong>
+            <span>Conducted <span class="kw-green">Taguchi L36</span> trials on a HAAS CNC Mini Mill under varied cutting parameters.</span>
+          </div>
+        </div>
+        <div class="thesis-finding-card">
+          <div class="thesis-finding-icon orange"><i class="fas fa-lightbulb"></i></div>
+          <div class="thesis-finding-text">
+            <strong>Key Finding</strong>
+            <span><span class="kw-orange">Tool path sequence</span> is more critical than spindle speed or feed rate across all response parameters.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Projects -->
+    <div class="projects-grid">
+      <div class="proj-card reveal">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">⚙️</div>
+            <span class="proj-tag">Lean / SMED</span>
+          </div>
+          <div class="proj-title">Mold Changeover Optimization</div>
+          <div class="proj-desc">Time study on a vulcanizing machine (5 molds). Applied SMED methodology to convert internal tasks to external operations. Used Python Pareto charts and Ishikawa diagrams.</div>
+        </div>
+        <div class="proj-card-bottom">
+          <div class="proj-result">72.81% changeover time saved — 55 extra units produced</div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">🤖</div>
+            <span class="proj-tag">ML / AI</span>
+          </div>
+          <div class="proj-title">FMCG Supply Chain Classification</div>
+          <div class="proj-desc">Classified supply chain nodes using Random Forest and XGBoost. Engineered 33 features. Applied Explainable AI for warehouse planning insights.</div>
+        </div>
+        <div class="proj-card-bottom">
+          <div class="proj-result">Perfect model accuracy achieved</div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-delay-2">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">🔍</div>
+            <span class="proj-tag">Instrumentation</span>
+          </div>
+          <div class="proj-title">Non-Destructive Crack Detection Tool</div>
+          <div class="proj-desc">Instrumentation project developing a specialized tool for analyzing and detecting material cracks without destructive testing methods.</div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">💧</div>
+            <span class="proj-tag">Embedded</span>
+          </div>
+          <div class="proj-title">Smart Water Level Monitor</div>
+          <div class="proj-desc">Embedded device for real-time water level monitoring and automated alert system. Full product design and prototype development cycle.</div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">📊</div>
+            <span class="proj-tag">CNC / Optimization</span>
+          </div>
+          <div class="proj-title">CNC Multi-Response Optimization</div>
+          <div class="proj-desc">Multi-response optimization of cutting parameters — simultaneously targeting energy consumption, machining time, and material removal rate.</div>
+        </div>
+      </div>
+      <div class="proj-card reveal reveal-delay-2">
+        <div class="proj-card-top">
+          <div class="proj-card-header">
+            <div class="proj-icon-wrap">🎓</div>
+            <span class="proj-tag">Education</span>
+          </div>
+          <div class="proj-title">Multi Dimension — YouTube Channel</div>
+          <div class="proj-desc">Founded an educational YouTube channel "Multi Dimension" for engineering content dissemination and knowledge sharing with aspiring engineers.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="pub-bg">
+  <div class="container">
+    <div class="section-label">// 06</div>
+    <h2 class="section-title">Pub<span>lications</span></h2>
+    <div class="pub-grid">
+      <div class="pub-card reveal">
+        <div class="pub-num">01</div>
+        <div class="pub-body">
+          <div class="pub-title">Ergonomics and Industry 4.0: Review and Prospects in Bangladesh</div>
+          <div class="pub-journal">IEOM Society International · 2024</div>
+          <a href="https://index.ieomsociety.org/index.cfm/item/53906" target="_blank" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>
+        </div>
+      </div>
+      <div class="pub-card reveal reveal-delay-1">
+        <div class="pub-num">02</div>
+        <div class="pub-body">
+          <div class="pub-title">Measuring the Productivity of Workers and Its Impact on Business Performance: A Case Study of Seven Selected RMG Industries</div>
+          <div class="pub-journal">International Conference on Mechanical, Industrial and Materials Engineering 2024</div>
+        </div>
+      </div>
+      <div class="pub-card reveal reveal-delay-2">
+        <div class="pub-num">03</div>
+        <div class="pub-body">
+          <div class="pub-title">Tool Path Selection Based Multi-Featured Part Machining and Optimization: An Experimental Approach</div>
+          <div class="pub-journal">Manuscript · CNC & ACO Research</div>
+          <span class="pub-status">Under Review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-label">// 07</div>
+    <h2 class="section-title">Achievements & <span>Leadership</span></h2>
+    <div class="ach-grid">
+      <div class="ach-card reveal">
+        <div class="ach-icon">🏆</div>
+        <div class="ach-title">AD Scientific Index 2023</div>
+        <div class="ach-desc">Ranked <span class="kw">225th</span> among SUST scientists — recognition of research contributions.</div>
+      </div>
+      <div class="ach-card reveal reveal-delay-1">
+        <div class="ach-icon">🎯</div>
+        <div class="ach-title">Competition Participant</div>
+        <div class="ach-desc">Mechanics Olympiads, <span class="kw-orange">CAD contests</span>, and university-level industrial engineering competitions.</div>
+      </div>
+      <div class="ach-card reveal reveal-delay-2">
+        <div class="ach-icon">🍽️</div>
+        <div class="ach-title">Team Management @ TICI</div>
+        <div class="ach-desc">Managed meal system for <span class="kw-green">100+ individuals</span> for one month — demonstrating leadership and logistics.</div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-icon">🥇</div>
+        <div class="ach-title">Academic Excellence</div>
+        <div class="ach-desc"><span class="kw">1st Rank</span> in annual physics examination during HSC college education.</div>
+      </div>
+      <div class="ach-card reveal reveal-delay-1">
+        <div class="ach-icon">🤝</div>
+        <div class="ach-title">Student Volunteer</div>
+        <div class="ach-desc">Provided admission support & guidance to incoming students at <span class="kw">SUST</span>.</div>
+      </div>
+      <div class="ach-card reveal reveal-delay-2">
+        <div class="ach-icon">📋</div>
+        <div class="ach-title">Class Representative</div>
+        <div class="ach-desc">Served as <span class="kw-orange">Class Monitor</span> Gr. 8–10 and Class Rep Sem. 6–7 at SUST.</div>
+      </div>
+    </div>
+
+    <!-- Certifications with Image Row -->
+    <div style="margin-top:48px" class="reveal">
+      <div class="section-label cert-section-label">// Certifications</div>
+
+      <!-- Certificate Image Row -->
+      <div class="cert-image-row" id="certImageRow">
+        <div class="cert-image-item" onclick="openCert('https://drive.google.com/uc?export=view&id=1pyKDyyAiGzKoOA0iFXfhlPAHAd7exahD')">
+          <img
+            src="https://drive.google.com/thumbnail?id=1pyKDyyAiGzKoOA0iFXfhlPAHAd7exahD&sz=w400"
+            alt="Certificate"
+            onerror="this.src='';this.parentElement.style.background='rgba(0,212,255,.06)';this.parentElement.style.minHeight='140px'">
+          <div class="cert-image-label">View Certificate</div>
+        </div>
+        <!-- Placeholder slots for additional certs — duplicate and change IDs as needed -->
+        <div class="cert-image-item" style="background:rgba(0,212,255,.04);cursor:default;opacity:.4;display:flex;align-items:center;justify-content:center;min-height:140px">
+          <span style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace;text-align:center;padding:10px">More certs<br>coming soon</span>
+        </div>
+      </div>
+
+      <!-- Certification Pills -->
+      <div class="cert-pills-row">
+        <div class="cert-pill"><i class="fas fa-certificate"></i>Operations Research – Transportation & Sequencing</div>
+        <div class="cert-pill"><i class="fas fa-code"></i>Python for Everybody (Coursera)</div>
+        <div class="cert-pill"><i class="fas fa-brain"></i>Machine Learning – Basics to Advanced</div>
+        <div class="cert-pill"><i class="fas fa-database"></i>Data Science & Business Analytics 3.0</div>
+        <div class="cert-pill"><i class="fas fa-cogs"></i>Engineering Project Management</div>
+        <div class="cert-pill"><i class="fas fa-star"></i>Six Sigma Yellow Belt</div>
+        <div class="cert-pill"><i class="fas fa-cube"></i>CAD & Digital Manufacturing</div>
+        <div class="cert-pill"><i class="fas fa-drafting-compass"></i>3-Axis Machining with Fusion 360</div>
+        <div class="cert-pill"><i class="fas fa-microchip"></i>Microcontrollers & C (MSP430)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAL TRAINING -->
+<section id="training" class="training-bg">
+  <div class="container">
+    <div class="section-label">// 08</div>
+    <h2 class="section-title">Industrial <span>Training</span></h2>
+    <div class="training-grid">
+      <div class="training-card reveal">
+        <div class="training-date">Nov – Dec 2023</div>
+        <div class="training-title">Training Institute of Chemical Industries <span class="kw">(TICI)</span></div>
+        <div class="training-desc">Practical training on <span class="kw">Operations Process</span>, <span class="kw">Instrumentation & Control</span>, and <span class="kw-orange">Industrial Hazard & Safety</span>.</div>
+      </div>
+      <div class="training-card reveal reveal-delay-1">
+        <div class="training-date">Dec 2022 · 10 Days</div>
+        <div class="training-title">Bangladesh Industrial & Technical Assistance Center <span class="kw-orange">(BITAC)</span></div>
+        <div class="training-desc">Hands-on program covering <span class="kw">Machine Shop</span>, <span class="kw">Welding</span>, and <span class="kw">Advanced Manufacturing</span> techniques.</div>
+      </div>
+      <div class="training-card reveal reveal-delay-2">
+        <div class="training-date">Nov 2021</div>
+        <div class="training-title">Premium Fish & Agro Industries Ltd., Sylhet</div>
+        <div class="training-desc">Industrial visit gaining practical insights into <span class="kw-green">aquaculture operations</span> and agro-based manufacturing processes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">// 09</div>
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="contact-layout">
+      <div>
+        <div class="contact-info-block reveal">
+          <div class="contact-info-title">Let's Connect</div>
+          <div class="contact-info-sub">Open to opportunities in manufacturing optimization, research, and industrial AI.</div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail-text">
+              <a href="mailto:anas.sust.edu@gmail.com" style="color:var(--text);text-decoration:none">anas.sust.edu@gmail.com</a>
+              <small>Primary email</small>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-detail-text">
+              +880 1707855910
+              <small>Mobile (WhatsApp)</small>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail-text">
+              Dhaka, Bangladesh
+              <small>Available for relocation</small>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.15);color:var(--accent2)"><i class="fas fa-at"></i></div>
+            <div class="contact-detail-text">
+              <a href="mailto:sikderanas@xceramics.com" style="color:var(--text);text-decoration:none">sikderanas@xceramics.com</a>
+              <small>Work email</small>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/md-anas-sikder/" target="_blank" class="soc-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.researchgate.net/profile/Md-Sikder-20" target="_blank" class="soc-btn" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+            <a href="https://www.coursera.org/user/b7d90532b152f71af4d42c4b2b7e8f4a" target="_blank" class="soc-btn" title="Coursera"><i class="fas fa-graduation-cap"></i></a>
+            <a href="mailto:anas.sust.edu@gmail.com" class="soc-btn" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-1">
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" placeholder="Your first name">
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" placeholder="Your last name">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label>Subject</label>
+          <input type="text" placeholder="Job opportunity / Collaboration / Research">
+        </div>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea placeholder="Tell me about the opportunity or project..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="align-self:flex-start">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">MD ANAS SIKDER</div>
+    <div class="footer-text" style="margin-bottom:16px">Industrial & Production Engineer · SUST · Bangladesh</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/md-anas-sikder/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+      <li><a href="https://www.researchgate.net/profile/Md-Sikder-20" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a></li>
+      <li><a href="https://www.coursera.org/user/b7d90532b152f71af4d42c4b2b7e8f4a" target="_blank"><i class="fas fa-graduation-cap"></i> Coursera</a></li>
+    </ul>
+    <div class="footer-text">© 2025 Md Anas Sikder — All rights reserved</div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Certificate Lightbox -->
+<div class="cert-lightbox" id="certLightbox" onclick="closeCert(event)">
+  <div class="cert-lightbox-inner">
+    <button class="cert-lightbox-close" onclick="document.getElementById('certLightbox').classList.remove('open')"><i class="fas fa-times"></i></button>
+    <img id="certLightboxImg" src="" alt="Certificate">
+  </div>
+</div>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX - 4 + 'px';
+  cursor.style.top = e.clientY - 4 + 'px';
+  ring.style.left = e.clientX - 16 + 'px';
+  ring.style.top = e.clientY - 16 + 'px';
+});
+document.querySelectorAll('a,button,.skill-tag').forEach(el => {
+  el.addEventListener('mouseenter', () => { ring.style.transform = 'scale(2)'; ring.style.borderColor = 'rgba(0,212,255,.6)'; });
+  el.addEventListener('mouseleave', () => { ring.style.transform = 'scale(1)'; ring.style.borderColor = 'rgba(0,212,255,.4)'; });
+});
+
+// Scroll events
+const nav = document.getElementById('mainNav');
+const scrollBtn = document.getElementById('scrollTop');
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  progressBar.style.width = (scrolled / total * 100) + '%';
+  nav.classList.toggle('scrolled', scrolled > 60);
+  scrollBtn.classList.toggle('show', scrolled > 400);
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+reveals.forEach(el => obs.observe(el));
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Animated counter
+function animateCounter(el, target) {
+  let start = 0;
+  const duration = 1600;
+  const step = timestamp => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = (target % 1 !== 0) ? (eased * target).toFixed(2) : Math.floor(eased * target);
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statNums = document.querySelectorAll('.hero-stat-num, .metric-num');
+const statObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const raw = e.target.textContent.replace(/[^0-9.]/g,'');
+      if (raw) animateCounter(e.target, parseFloat(raw));
+      statObs.unobserve(e.target);
+    }
+  });
+}, { threshold: .5 });
+statNums.forEach(el => statObs.observe(el));
+
+// Certificate lightbox
+function openCert(src) {
+  document.getElementById('certLightboxImg').src = src;
+  document.getElementById('certLightbox').classList.add('open');
+}
+function closeCert(e) {
+  if (e.target === document.getElementById('certLightbox')) {
+    document.getElementById('certLightbox').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>
